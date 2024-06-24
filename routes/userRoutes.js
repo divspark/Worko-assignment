@@ -3,7 +3,7 @@ import express from 'express'
 
 const app = express();
 
-
+//User Routes /api/v1/user
 
 app.post('/new',createUser);
 app.get("/all",getAllUsers);
