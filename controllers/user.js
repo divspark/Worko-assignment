@@ -10,6 +10,9 @@ const createUser = async (req, res) => {
   }
 };
 
+
+getAllUsers
+
 const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
@@ -20,4 +23,13 @@ const getUserById = async (req, res) => {
   }
 };
 
-export { createUser, getUserById };
+const getAllUsers = async (req, res) => {
+  try {
+    const user = await User.find({});
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export { createUser, getUserById, getAllUsers };
