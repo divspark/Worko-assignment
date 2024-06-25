@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 
-app.use('api/v1/user', userRoutes);
-app.use('api/v1/refferal', referralRoutes);
+app.use('/user', userRoutes);
+app.use('/refferal', referralRoutes);
 
 
 app.listen(process.env.port,()=>{
