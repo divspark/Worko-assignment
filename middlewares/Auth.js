@@ -5,7 +5,7 @@ const JWT_SECRET = 'Dabbemein4098';
 const JWT_EXPIRATION = '1d'; // 1 day
 
 
-const jwtAuthMiddleware = (req, res, next) => {
+export const jwtAuthMiddleware = (req, res, next) => {
     // Check header or query parameters or post parameters for token
     const token = req.headers.authorization;
   
