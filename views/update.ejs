@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+    <title>Update Profile</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -50,7 +50,7 @@
         width: 100%;
         padding: 10px;
         border: none;
-        background-color: #28a745;
+        background-color: #007bff;
         color: #fff;
         font-size: 16px;
         border-radius: 4px;
@@ -58,14 +58,18 @@
       }
 
       button:hover {
-        background-color: #218838;
+        background-color: #0056b3;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h2>Signup</h2>
-      <form action="/user/signup" method="POST">
+      <h2>Update Profile</h2>
+      <form action="/user/update" method="POST">
+        <div class="form-group">
+          <label for="userId">User ID</label>
+          <input type="text" id="userId" name="userId" required />
+        </div>
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" required />
@@ -87,15 +91,11 @@
           <input type="text" id="city" name="city" required />
         </div>
         <div class="form-group">
-          <label for="zip">Zip Code</label>
+          <label for="zipCode">Zip Code</label>
           <input type="text" id="zipCode" name="zipCode" required />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div class="form-group">
-          <button type="submit">Signup</button>
+          <button type="submit">Update</button>
         </div>
       </form>
     </div>

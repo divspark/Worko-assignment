@@ -14,6 +14,10 @@ export const Login = (req, res) => {
   res.render("login");
 };
 
+export const Update = (req, res) => {
+  res.render("update");
+};
+
 export const HandleUserSignup = async (req, res) => {
   try {
     const newUser = await userService.createUser(req.body);

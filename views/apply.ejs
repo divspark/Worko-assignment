@@ -1,128 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Referral Application Form</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
 
-        body {
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-        }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+      }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
 
-        textarea {
-            resize: vertical;
-        }
+      textarea {
+        resize: vertical;
+      }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
 
-        button:hover {
-            background-color: #0056b3;
-        }
-        .flex{
-            display: flex;
-            justify-content: space-between;
-        }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h2>Apply for a Referral</h2>
-        <form action="/referral/submit" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="position">Position</label>
-                <input type="text" id="position" name="position" required>
-            </div>
-            <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message to Referrer</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label>Select Options:</label><br>
-                <div class="flex">
-                    <input type="checkbox" id="resumeReview" name="services" value="resumeReview">
-                    <label for="resumeReview">Resume Review</label><br>
-                    <input type="checkbox" id="interviewHandhold" name="services" value="interviewHandhold">
-                    <label for="interviewHandhold">Interview Handhold</label><br>
-                </div>
-                
-                <div class="flex">
-                    <input type="checkbox" id="careerGuidance" name="services" value="careerGuidance">
-                    <label for="careerGuidance">Career Guidance</label><br>
-                    <input type="checkbox" id="mockInterview" name="services" value="mockInterview">
-                    <label for="mockInterview">Mock Interview</label><br>
-                </div>
-                
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit Application</button>
-            </div>
-        </form>
+      <h2>Apply for a Referral</h2>
+      <form action="/referral/submit" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="position">Position</label>
+          <input type="text" id="position" name="position" required />
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message to Referrer</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Select Options:</label><br />
+          <div class="flex">
+            <input
+              type="checkbox"
+              id="resumeReview"
+              name="services"
+              value="resumeReview"
+            />
+            <label for="resumeReview">Resume Review</label><br />
+            <input
+              type="checkbox"
+              id="interviewHandhold"
+              name="services"
+              value="interviewHandhold"
+            />
+            <label for="interviewHandhold">Interview Handhold</label><br />
+          </div>
+
+          <div class="flex">
+            <input
+              type="checkbox"
+              id="careerGuidance"
+              name="services"
+              value="careerGuidance"
+            />
+            <label for="careerGuidance">Career Guidance</label><br />
+            <input
+              type="checkbox"
+              id="mockInterview"
+              name="services"
+              value="mockInterview"
+            />
+            <label for="mockInterview">Mock Interview</label><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit">Submit Application</button>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>

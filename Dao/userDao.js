@@ -1,4 +1,4 @@
-import User from '../models/user.js';
+import User from "../models/user.js";
 
 export const getAllUsers = async () => {
   return await User.find({ deletedAt: { $exists: false } });

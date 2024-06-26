@@ -3,6 +3,7 @@ import {
   HandleUserSignup,
   Login,
   Signup,
+  Update,
   deleteUserById,
   getAllUsers,
   getUserById,
@@ -19,9 +20,10 @@ app.post("/signup", HandleUserSignup);
 app.get("/login", Login);
 app.post("/login", HandleUserLogin);
 app.get("/all", getAllUsers);
-//app.get("/:id", getUserById);
-//app.put("/:id", updateUserById);
+app.get("/:id", getUserById);
+app.get("/:id/update", Update);
+app.put("/:id", updateUserById);
 //app.patch("/:id",updateSiById);
-//app.delete("/:id", deleteUserById);
+app.delete("/:id", deleteUserById);
 
 export default app;

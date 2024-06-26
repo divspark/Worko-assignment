@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const ReferralSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -6,9 +6,9 @@ const ReferralSchema = new mongoose.Schema({
   position: { type: String, required: true },
   company: { type: String, required: true },
   message: { type: String },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
 });
 
-const Referral = mongoose.model('Referral', ReferralSchema);
+const Referral = mongoose.model("Referral", ReferralSchema);
 
 export default Referral;
