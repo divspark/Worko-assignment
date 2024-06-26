@@ -1,5 +1,5 @@
 import express from "express";
-import { getRefferal, submitRefferal } from "../controllers/refferal.js";
+import { getRefferal, submitReferral } from "../controllers/refferal.js";
 
 const app = express();
 
@@ -7,6 +7,6 @@ const app = express();
 app.get("/apply", getRefferal);
 
 // Route to handle form submission
-app.post("/submit", submitRefferal);
+app.post("/submit", submitReferral);
 
 export default app;
