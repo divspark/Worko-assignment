@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import connectDB from "./DB/connect.js";
 import userRoutes from "./routes/userRoutes.js";
 import referralRoutes from "./routes/referralRoutes.js";
+import bodyParser from 'body-parser';
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Parse JSON bodies
 app.use(express.json());
+app.use(bodyParser.json()); // For parsing application/json
 
 // Routes
 app.get("/", (req, res) => {

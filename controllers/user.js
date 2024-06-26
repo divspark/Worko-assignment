@@ -74,20 +74,37 @@ export const getUserById = async (req, res) => {
   }
 };
 
+// export const updateUserById = async (req, res) => {
+//   try {
+//     const updatedUser = await userService.updateUserById(
+//       req.params.id,
+//       req.body
+//     );
+//     if (!updatedUser) {
+//       return res.status(404).json({ message: "User not found" });
+//     }
+//     res.json(updatedUser);
+//   } catch (error) {
+//     res.status(400).json({ message: error.message });
+//   }
+// };
+
 export const updateUserById = async (req, res) => {
   try {
-    const updatedUser = await userService.updateUserById(
-      req.params.id,
-      req.body
-    );
+    const { userId, ...updateDetails } = req.body; // Destructure to get userId and other update details
+
+    const updatedUser = await userService.updateUserById(userId, updateDetails);
+
     if (!updatedUser) {
       return res.status(404).json({ message: "User not found" });
     }
+
     res.json(updatedUser);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
+
 
 export const deleteUserById = async (req, res) => {
   try {

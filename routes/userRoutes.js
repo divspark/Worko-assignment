@@ -22,7 +22,7 @@ app.post("/login", HandleUserLogin);
 app.get("/all", getAllUsers);
 app.get("/:id", getUserById);
 app.get("/:id/update", Update);
-app.put("/:id", updateUserById);
+app.post("/:id/update", updateUserById);
 //app.patch("/:id",updateSiById);
 app.delete("/:id", deleteUserById);
 
