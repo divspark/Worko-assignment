@@ -4,8 +4,18 @@ export const getRefferal = async (req, res) => {
   res.render("apply");
 };
 
-export const submitRefferal = async (req, res) => {
-  const { name, email, position, company, message } = req.body;
+export const submitReferral = async (req, res) => {
+  const {
+    name,
+    email,
+    position,
+    company,
+    message,
+    resumeReview,
+    interviewHandhold,
+    careerGuidance,
+    mockInterview,
+  } = req.body;
 
   try {
     // Create a new referral object
@@ -15,6 +25,10 @@ export const submitRefferal = async (req, res) => {
       position,
       company,
       message,
+      resumeReview,
+      interviewHandhold,
+      careerGuidance,
+      mockInterview,
     });
 
     // Save the referral to the database
