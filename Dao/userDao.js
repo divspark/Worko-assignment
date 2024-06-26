@@ -18,5 +18,10 @@ export const updateUserById = async (id, updateData) => {
 };
 
 export const deleteUserById = async (id) => {
-  return await User.findByIdAndUpdate(id, { deletedAt: new Date() });
+  try {
+    const deletedUser = await User.findByIdAndDelete(id);
+    return deletedUser;
+  } catch (error) {
+    throw new Error(`Failed to delete user: ${error.message}`);
+  }
 };

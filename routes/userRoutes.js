@@ -24,6 +24,6 @@ app.get("/:id", getUserById);
 app.get("/:id/update", Update);
 app.post("/:id/update", updateUserById);
 //app.patch("/:id",updateSiById);
-app.delete("/:id", deleteUserById);
+app.delete("/:id/delete", deleteUserById);
 
 export default app;
