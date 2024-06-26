@@ -50,9 +50,8 @@ npm install
 Create a `.env` file in the root of the project and add the following variables:
 
 ```env
-PORT=3000
+PORT=4000
 MONGODB_URI=your-mongodb-uri
-JWT_SECRET=your-jwt-secret
 ```
 
 ### Running the Application
@@ -63,7 +62,7 @@ Start the server:
 npm start
 ```
 
-The server will start on `http://localhost:3000`.
+The server will start on `http://localhost:4000`.
 
 ## API Endpoints
 
