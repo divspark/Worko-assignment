@@ -30,7 +30,7 @@ This project is a web application built using Node.js, Express, and MongoDB. It 
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/divspark/Worko-assignment.git
 ```
 
 2. Navigate to the project directory:
